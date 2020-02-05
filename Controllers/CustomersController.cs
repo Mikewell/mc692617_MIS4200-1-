@@ -11,14 +11,14 @@ using mc692617_MIS4200.Models;
 
 namespace mc692617_MIS4200.Controllers
 {
-    public class CustomerController : Controller
+    public class CustomersController : Controller
     {
         private MIS4200Context db = new MIS4200Context();
 
         // GET: Customer
         public ActionResult Index()
         {
-            return View(db.Customer.ToList());
+            return View(db.Customers.ToList());
         }
 
         // GET: Customer/Details/5
@@ -28,7 +28,7 @@ namespace mc692617_MIS4200.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Customer customer = db.Customer.Find(id);
+            Customers customer = db.Customers.Find(id);
             if (customer == null)
             {
                 return HttpNotFound();
@@ -47,11 +47,11 @@ namespace mc692617_MIS4200.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "customerID,customerFirstName,customerLastName,email,phone,customerSince")] Customer customer)
+        public ActionResult Create([Bind(Include = "customerID,customerFirstName,customerLastName,email,phone,customerSince")] Customers customer)
         {
             if (ModelState.IsValid)
             {
-                db.Customer.Add(customer);
+                db.Customers.Add(customer);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -66,7 +66,7 @@ namespace mc692617_MIS4200.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Customer customer = db.Customer.Find(id);
+            Customers customer = db.Customers.Find(id);
             if (customer == null)
             {
                 return HttpNotFound();
@@ -79,7 +79,7 @@ namespace mc692617_MIS4200.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "customerID,customerFirstName,customerLastName,email,phone,customerSince")] Customer customer)
+        public ActionResult Edit([Bind(Include = "customerID,customerFirstName,customerLastName,email,phone,customerSince")] Customers customer)
         {
             if (ModelState.IsValid)
             {
@@ -97,7 +97,7 @@ namespace mc692617_MIS4200.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Customer customer = db.Customer.Find(id);
+            Customers customer = db.Customers.Find(id);
             if (customer == null)
             {
                 return HttpNotFound();
@@ -110,8 +110,8 @@ namespace mc692617_MIS4200.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Customer customer = db.Customer.Find(id);
-            db.Customer.Remove(customer);
+            Customers customer = db.Customers.Find(id);
+            db.Customers.Remove(customer);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

@@ -1,10 +1,10 @@
-﻿@model IEnumerable<mc692617_MIS4200.Models.Customer>
+﻿@model IEnumerable<mc692617_MIS4200.Models.Customers>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Customer Index";
 }
 
-<h2>Index</h2>
+<h2>Orders Index</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -26,9 +26,6 @@
         <th>
             @Html.DisplayNameFor(model => model.customerSince)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.MyProperty)
-        </th>
         <th></th>
     </tr>
 
@@ -48,9 +45,6 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.customerSince)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.MyProperty)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.customerID }) |

@@ -14,6 +14,6 @@ namespace mc692617_MIS4200.Models
         public int orderDate { get; set; }
         public int customerID { get; set; }
 
-        public virtual Customer Customer { get; set; }
+        public virtual Customers Customer { get; set; }
     }
 }

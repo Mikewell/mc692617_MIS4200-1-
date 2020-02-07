@@ -16,8 +16,11 @@ namespace mc692617_MIS4200.DAL
         {                       // this method is a constructor and is called when a new contact is created
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<MIS4200Context, mc692617_MIS4200.Migrations.MISContext.Configuration>("DefaultConnection"));
         }
-        public DbSet <Orders> Orders { get; set; }
-        public DbSet <Customers> Customers { get; set; }
+        public DbSet <Vet> Vets { get; set; }
+        public DbSet <Pet> Pets { get; set; }
+        public DbSet <petDetail> PetDetails { get; set; }
+        public DbSet <Owner> Owners { get; set; }
+
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

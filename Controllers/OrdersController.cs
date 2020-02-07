@@ -18,7 +18,7 @@ namespace mc692617_MIS4200.Controllers
         // GET: Orders
         public ActionResult Index()
         {
-            var orders = db.Orders.Include(o => o.Customer);
+            var orders = db.Vets.Include(o => o.Customer);
             return View(orders.ToList());
         }
 
@@ -29,7 +29,7 @@ namespace mc692617_MIS4200.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Orders orders = db.Orders.Find(id);
+            Orders orders = db.Vets.Find(id);
             if (orders == null)
             {
                 return HttpNotFound();
@@ -53,7 +53,7 @@ namespace mc692617_MIS4200.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Orders.Add(orders);
+                db.Vets.Add(orders);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -69,7 +69,7 @@ namespace mc692617_MIS4200.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Orders orders = db.Orders.Find(id);
+            Orders orders = db.Vets.Find(id);
             if (orders == null)
             {
                 return HttpNotFound();
@@ -102,7 +102,7 @@ namespace mc692617_MIS4200.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Orders orders = db.Orders.Find(id);
+            Orders orders = db.Vets.Find(id);
             if (orders == null)
             {
                 return HttpNotFound();
@@ -115,8 +115,8 @@ namespace mc692617_MIS4200.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Orders orders = db.Orders.Find(id);
-            db.Orders.Remove(orders);
+            Orders orders = db.Vets.Find(id);
+            db.Vets.Remove(orders);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

@@ -18,7 +18,7 @@ namespace mc692617_MIS4200.DAL
         }
         public DbSet <Vet> Vets { get; set; }
         public DbSet <Pet> Pets { get; set; }
-        public DbSet <petDetail> PetDetails { get; set; }
+        public DbSet <Visits> Visits { get; set; }
         public DbSet <Owner> Owners { get; set; }
 
 

@@ -170,10 +170,6 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\OwnersController.cs" />
-    <Compile Include="Controllers\petDetailsController.cs" />
-    <Compile Include="Controllers\PetsController.cs" />
-    <Compile Include="Controllers\VetsController.cs" />
     <Compile Include="DAL\MIS4200Context.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -184,8 +180,8 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Owner.cs" />
     <Compile Include="Models\Pet.cs" />
-    <Compile Include="Models\petDetail.cs" />
     <Compile Include="Models\Vet.cs" />
+    <Compile Include="Models\Visits.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -256,11 +252,6 @@
     <Content Include="Views\Pets\Details.cshtml" />
     <Content Include="Views\Pets\Edit.cshtml" />
     <Content Include="Views\Pets\Index.cshtml" />
-    <Content Include="Views\petDetails\Create.cshtml" />
-    <Content Include="Views\petDetails\Delete.cshtml" />
-    <Content Include="Views\petDetails\Details.cshtml" />
-    <Content Include="Views\petDetails\Edit.cshtml" />
-    <Content Include="Views\petDetails\Index.cshtml" />
     <Content Include="Views\Owners\Create.cshtml" />
     <Content Include="Views\Owners\Delete.cshtml" />
     <Content Include="Views\Owners\Details.cshtml" />

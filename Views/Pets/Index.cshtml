@@ -1,0 +1,69 @@
+﻿@model IEnumerable<mc692617_MIS4200.Models.Pet>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Owner.firstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.birthday)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.breed)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.weight)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.height)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.trackingNumber)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Owner.firstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.birthday)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.breed)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.weight)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.height)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.trackingNumber)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.petID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.petID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.petID })
+        </td>
+    </tr>
+}
+
+</table>

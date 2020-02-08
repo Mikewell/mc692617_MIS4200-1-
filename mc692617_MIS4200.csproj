@@ -170,6 +170,10 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\OwnersController.cs" />
+    <Compile Include="Controllers\PetsController.cs" />
+    <Compile Include="Controllers\VetsController.cs" />
+    <Compile Include="Controllers\VisitsController.cs" />
     <Compile Include="DAL\MIS4200Context.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -242,6 +246,26 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Visits\Create.cshtml" />
+    <Content Include="Views\Visits\Delete.cshtml" />
+    <Content Include="Views\Visits\Details.cshtml" />
+    <Content Include="Views\Visits\Edit.cshtml" />
+    <Content Include="Views\Visits\Index.cshtml" />
+    <Content Include="Views\Owners\Create.cshtml" />
+    <Content Include="Views\Owners\Delete.cshtml" />
+    <Content Include="Views\Owners\Details.cshtml" />
+    <Content Include="Views\Owners\Edit.cshtml" />
+    <Content Include="Views\Owners\Index.cshtml" />
+    <Content Include="Views\Pets\Create.cshtml" />
+    <Content Include="Views\Pets\Delete.cshtml" />
+    <Content Include="Views\Pets\Details.cshtml" />
+    <Content Include="Views\Pets\Edit.cshtml" />
+    <Content Include="Views\Pets\Index.cshtml" />
+    <Content Include="Views\Vets\Create.cshtml" />
+    <Content Include="Views\Vets\Delete.cshtml" />
+    <Content Include="Views\Vets\Details.cshtml" />
+    <Content Include="Views\Vets\Edit.cshtml" />
+    <Content Include="Views\Vets\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

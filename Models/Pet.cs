@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -35,9 +36,11 @@ namespace mc692617_MIS4200.Models
         public int trackingNumber { get; set; }
 
         [Display(Name = "VisitID")]
+        
         public ICollection <Visits> Visits { get; set; }
         // the next two properties link the Pet to the Visit
         [Display(Name = "Owner")]
+        
         public int ownerID { get; set; }
         public virtual Owner Owner { get; set; }
 

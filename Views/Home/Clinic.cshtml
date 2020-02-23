@@ -3,20 +3,31 @@
 @{
     ViewBag.Title = "Clinic Home";
 }
-    <p>
-        <h4>Where your puppies are treated better than you!</h4>
-        <br />
-        If you already have an account with us just book an appointment!
-        <br />
-        <br />
-        If not click create an account!
-        <br />
-        <br />
-        @Html.ActionLink("Book An Appointment", "Create", "Visits", null, new { @class = "btn btn-primary" })
 
-        @Html.ActionLink("Create An Account", "Create", "Owners", null, new { @class = "btn btn-primary btn-large" })
-        <br />
-    </p>
+    <div class="well" style="background-color:darkseagreen">
+        <p>
+            <h2 style="color: white">Mike's Veterinarian Clinic</h2>
+            <h4 style="color: white">Where we pamper your pups!</h4>
+        </p>
+    </div>
+
+
+    <div class="well-lg" style="background-color:silver">
+        <p>
+            <br />
+            If you already have an account with us just book an appointment!
+            <br />
+            <br />
+            If not click create an account!
+            <br />
+            <br />
+            @Html.ActionLink("Book An Appointment", "Create", "Visits", null, new { @class = "btn btn-primary" })
+
+            @Html.ActionLink("Create An Account", "Create", "Owners", null, new { @class = "btn btn-primary btn-large" })
+            <br />
+
+        </p>
+    </div>
 
 
 

@@ -2,38 +2,22 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron" style="background-color:seagreen">
+<div class="jumbotron" style="background-color:dimgrey; border-color:black; border-style:double">
     <h2 style="color: white">MIS 4200 - IS Consulting Project</h2>
     <p class="lead" style="color:white">
         <br />
-        Whats going on Prof Luce and everybody that I send the link of this to :)
+        This is the individual portion of this capstone course
         <br />
-        <br />
-        - Mike Calvert 
-        @Html.ActionLink("About", "About", "Home", null, new { @class = "btn btn-primary" }) 
-        @Html.ActionLink("Contact", "Contact", "Home", null, new { @class = "btn btn-primary" })
+        <h2 style="color: white">- Mike Calvert</h2>      
+        <a class="btn btn-default" onclick="location.href='@Url.Action("About", "Home")'"> About Me &raquo;</a>
+        <a class="btn btn-default" onclick="location.href='@Url.Action("Contact", "Home")'"> Contact Info &raquo;</a>
     </p>
 
    
 </div>
 
-<div class="row">
-    <div class="col-md-3">
-        <h2>Academia</h2>
-        <p>
-            <strong>Ohio University</strong> | B.B.A | May 2020 <br />
-            <strong>Majors:</strong> MIS and Business Analytics  <br />
-            <strong>Minor:</strong> Finance  <br />
-            <br />
-            Grad school in probably 3-5 years, where? who knows
-        </p>
-        <p><a class="btn btn-default" href="https://www.ohio.edu/majors"> OU Majors &raquo;</a></p>
-        <p>
-            <br />
-            Find "Management Information Systems" or "Business Analytics" to learn more what we do in class!
-        </p>
-    </div>
-    <div class="col-md-6">
+<div class="row" style="border-style: double; border-color:black">
+    <div class="col-md-7">
         <h2>Software Development Assignment</h2>
         <p>
             We were tasked to build an MVC that has a many-to-many relationship. I choose to stlye my MVC after a Veterinarian Clinic's
@@ -41,11 +25,11 @@
             to build any appointment/order/forum based system with the ability to retain the data entered in SQL.
             <br />
             <br />
-            You can view  Veterinarian Clinic's "Website" here or in the navigation bar above! <br />
-            @Html.ActionLink("Clinic", "Clinic", "Home", null, new { @class = "btn btn-primary btn-large" })
+            <strong>View the Veterinarian Clinic's "Website" here:</strong> 
+            <a class="btn btn-default" onclick="location.href='@Url.Action("Clinic", "Home")'"> Clinic Homepage &raquo;</a>
             <br />
             <br />
-            COURSE OBJECTIVES: <br />
+            <h4>COURSE OBJECTIVES: </h4>
             •	Obtain practical experience working on an information system development project, working for an actual client.<br />
             •	Describe and discuss Scrum and Agile development.  Compare/contrast these techniques to those used in traditional software development approaches.<br />
             •	Demonstrate the systems development process using Scrum and other Agile approaches<br />
@@ -54,17 +38,26 @@
             •	Assess and refine your overall technical skills in HTML, CSS, ASP.NET MVC, Bootstrap, Entity Framework and SQL Server recognizing areas needing improvement.<br />
         </p>
     </div>
-    <div class="col-md-3">
+    <div class="col-md-5">
         <h2>Career</h2>
         <p>
             <strong>Company:</strong> Rovisys <br />
             <strong>Title:</strong> Software Developer <br />
             <br />
             Come May when I graduate I will be working full time doing things like building this exact MVC but for clients
-            <br />
-            <br />
         </p>
         <p><a class="btn btn-default" href="https://www.rovisys.com/">Rovisys &raquo;</a></p>
+        <h2>Academia</h2>
+        <p>
+            <strong>Ohio University</strong> | B.B.A | May 2020 <br />
+            <strong>Majors:</strong> MIS and Business Analytics  <br />
+            <strong>Minor:</strong> Finance  <br />
+            <br />
+            I will hopefully attend grad school in 3-5 years, expanding on my double major.
+        </p>
+        <p><a class="btn btn-default" href="https://www.ohio.edu/majors"> OU Majors &raquo;</a></p>
+        <p>
+            Find "Management Information Systems" or "Business Analytics" to learn more what we do in class!
+        </p>
     </div>
-
 </div>

@@ -22,6 +22,7 @@ namespace mc692617_MIS4200.Models
         [Display(Name = "Email")]
         [Required]
         [EmailAddress(ErrorMessage ="Enter Email Address")]
+        
         public string email { get; set; }
         [Display(Name = "Phone Number")]
         [DataType(DataType.PhoneNumber)]

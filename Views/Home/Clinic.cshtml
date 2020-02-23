@@ -4,30 +4,47 @@
     ViewBag.Title = "Clinic Home";
 }
 
-    <div class="well" style="background-color:darkseagreen">
-        <p>
-            <h2 style="color: white">Mike's Veterinarian Clinic</h2>
-            <h4 style="color: white">Where we pamper your pups!</h4>
-        </p>
+<div class="well" style="background-color:dimgrey" ; border-color:black; border-style:double">
+    <p>
+        <h2 style="color: white">Mike's Veterinarian Clinic</h2>
+        <h4 style="color: white">Where we pamper your pups!</h4>
+    </p>
+</div>
+<div class="row">
+    <div class="col-md-6" style="border-style: double; border-color:black">
+        <div class="well-sm">
+            <h3>Appointments</h3>
+            <a class="btn btn-default" onclick="location.href='@Url.Action("Index", "Visits")'"> List of Appointments &raquo;</a>
+            <a class="btn btn-default" onclick="location.href='@Url.Action("Create", "Visits")'"> Create New Appointment &raquo;</a>
+        </div>
+        <div class="well-sm">
+            <h3>Owners</h3>
+            <a class="btn btn-default" onclick="location.href='@Url.Action("Index", "Owners")'"> List of Owner &raquo;</a>
+            <a class="btn btn-default" onclick="location.href='@Url.Action("Create", "Owners")'"> Add New Owner &raquo;</a>
+        </div>
+        <div class="well-sm">
+            <h3>Pets</h3>
+            <a class="btn btn-default" onclick="location.href='@Url.Action("Index", "Pets")'"> List of Pets &raquo;</a>
+            <a class="btn btn-default" onclick="location.href='@Url.Action("Create", "Pets")'"> Add New Pet &raquo;</a>
+
+        </div>
+        <div class="well-sm">
+            <h3>Vets</h3>
+            <a class="btn btn-default" onclick="location.href='@Url.Action("Index", "Vets")'"> List of Vets &raquo;</a>
+            <a class="btn btn-default" onclick="location.href='@Url.Action("Create", "Vets")'"> Add New Vet &raquo;</a>
+        </div>
     </div>
+    
+    <div class="col-md-6" style="border-style: double; border-color:black">
+        <h2>If I treated this were a business and not an assignment</h2>
 
 
-    <div class="well-lg" style="background-color:silver">
-        <p>
-            <br />
-            If you already have an account with us just book an appointment!
-            <br />
-            <br />
-            If not click create an account!
-            <br />
-            <br />
-            @Html.ActionLink("Book An Appointment", "Create", "Visits", null, new { @class = "btn btn-primary" })
-
-            @Html.ActionLink("Create An Account", "Create", "Owners", null, new { @class = "btn btn-primary btn-large" })
-            <br />
-
-        </p>
     </div>
+</div>
+
+
+
+
 
 
 

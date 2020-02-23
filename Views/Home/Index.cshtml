@@ -4,29 +4,60 @@
 
 <div class="jumbotron" style="background-color:seagreen">
     <h2 style="color: white">MIS 4200 - IS Consulting Project</h2>
-    <p class="lead" style="color:white"> <br /> Whats going on Prof Luce and everybody that I send the link of this to :) <br /> <br /> - Mike Calvert </p>
+    <p class="lead" style="color:white">
+        <br />
+        Whats going on Prof Luce and everybody that I send the link of this to :)
+        <br />
+        <br />
+        - Mike Calvert 
+        @Html.ActionLink("About", "About", "Home", null, new { @class = "btn btn-primary" }) 
+        @Html.ActionLink("Contact", "Contact", "Home", null, new { @class = "btn btn-primary" })
+    </p>
+
    
 </div>
 
 <div class="row">
-    <div class="col-md-4">
-        <h2>Academic</h2>
+    <div class="col-md-3">
+        <h2>Academia</h2>
         <p>
             <strong>Ohio University</strong> | B.B.A | May 2020 <br />
-            <strong>Majors:</strong> MIS and Business Analytics  <br /> 
+            <strong>Majors:</strong> MIS and Business Analytics  <br />
             <strong>Minor:</strong> Finance  <br />
             <br />
-            Grad school in probably 3-5 years, where? who knows 
+            Grad school in probably 3-5 years, where? who knows
         </p>
         <p><a class="btn btn-default" href="https://www.ohio.edu/majors"> OU Majors &raquo;</a></p>
         <p>
             <br />
-            Find "Management Information Systems" to learn more what we do in class!
+            Find "Management Information Systems" or "Business Analytics" to learn more what we do in class!
         </p>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-6">
+        <h2>Software Development Assignment</h2>
+        <p>
+            We were tasked to build an MVC that has a many-to-many relationship. I choose to stlye my MVC after a Veterinarian Clinic's
+            Pets-Veterinarians relationship but could've been anything from Students-Courses to Renters-Appartments. This displays my capabilities
+            to build any appointment/order/forum based system with the ability to retain the data entered in SQL.
+            <br />
+            <br />
+            You can view  Veterinarian Clinic's "Website" here or in the navigation bar above! <br />
+            @Html.ActionLink("Clinic", "Clinic", "Home", null, new { @class = "btn btn-primary btn-large" })
+            <br />
+            <br />
+            COURSE OBJECTIVES: <br />
+            •	Obtain practical experience working on an information system development project, working for an actual client.<br />
+            •	Describe and discuss Scrum and Agile development.  Compare/contrast these techniques to those used in traditional software development approaches.<br />
+            •	Demonstrate the systems development process using Scrum and other Agile approaches<br />
+            •	Demonstrate a practical understanding of modern input /output/user interface design concepts using an integrated development environment.<br />
+            •	Demonstrate knowledge and application of the ASP.NET MVC design pattern.<br />
+            •	Assess and refine your overall technical skills in HTML, CSS, ASP.NET MVC, Bootstrap, Entity Framework and SQL Server recognizing areas needing improvement.<br />
+        </p>
+    </div>
+    <div class="col-md-3">
         <h2>Career</h2>
-        <p> <strong>Company:</strong> Rovisys <br/>
+        <p>
+            <strong>Company:</strong> Rovisys <br />
             <strong>Title:</strong> Software Developer <br />
             <br />
             Come May when I graduate I will be working full time doing things like building this exact MVC but for clients
@@ -35,25 +66,5 @@
         </p>
         <p><a class="btn btn-default" href="https://www.rovisys.com/">Rovisys &raquo;</a></p>
     </div>
-    <div class="col-md-4">
-        <h2>Mike's Veterinary Clinic and Spa</h2>
-        <p>
-            Where your puppies are treated better than you! <br />
-            Create an account and book your best friend's appointment today:
 
-            @Html.ActionLink("Create Account", "Create", "Owners") <br />
-
-            @Html.ActionLink("Pet", "Index", "Pets") <br />
-            @Html.ActionLink("Visits", "Index", "Visits")<br />
-            @Html.ActionLink("Owner", "Index", "Owners")
-            @Html.ActionLink("Vet", "Index", "Vets") <br />
-
-
-        </p>
-        <p><br /><a class="btn btn-default" href="https://dogtime.com/puppies/255-puppies#/slide/1"> Puppies &raquo;</a> <br/>
-            <br />
-            A link to puppies! Since Prof Luce likes puppies 
-        
-        </p>
-    </div>
 </div>

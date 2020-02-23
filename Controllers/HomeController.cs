@@ -26,5 +26,11 @@ namespace mc692617_MIS4200.Controllers
 
             return View();
         }
+        public ActionResult Clinic()
+        {
+            ViewBag.Message = "Clinic Homepage";
+
+            return View();
+        }
     }
 }

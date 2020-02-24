@@ -9,7 +9,9 @@ namespace mc692617_MIS4200.Models
 {
     public class Pet
     {
-        [Key] public int petID { get; set; }
+        [Key]
+        [Display(Name = "Pet Name")]
+        public int petID { get; set; }
         [Display(Name = "Name")]
         [Required(ErrorMessage = "Name Required")]
         

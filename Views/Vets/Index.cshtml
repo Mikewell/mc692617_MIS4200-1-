@@ -47,9 +47,9 @@
             @Html.DisplayFor(modelItem => item.employeeSince)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.vetID }) |
+            @Html.ActionLink(" ", "Edit", new { id=item.vetID }, new { @class="glyphicon glyphicon-pencil"}) |
             @Html.ActionLink("Details", "Details", new { id=item.vetID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.vetID })
+            @Html.ActionLink(" ", "Delete", new { id=item.vetID }, new { @class="glyphicon glyphicon-trash"}) 
         </td>
     </tr>
 }

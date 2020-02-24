@@ -59,9 +59,10 @@
             @Html.DisplayFor(modelItem => item.trackingNumber)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.petID }) |
+
+            @Html.ActionLink(" ", "Edit", new { id = item.petID }, new { @class="glyphicon glyphicon-pencil"}) |
             @Html.ActionLink("Details", "Details", new { id=item.petID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.petID })
+            @Html.ActionLink(" ", "Delete", new { id=item.petID },new { @class="glyphicon glyphicon-trash"}) 
         </td>
     </tr>
 }

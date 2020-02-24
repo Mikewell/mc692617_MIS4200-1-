@@ -10,7 +10,11 @@ namespace mc692617_MIS4200.Models
     public class Owner
     {
         [Key]
+        [Display(Name = "Owner Name")]
         public int ownerID { get; set; }
+
+        public string fullName { get { return lastName + ", " + firstName; } }
+
         [Display(Name = "First Name")]
         [Required(ErrorMessage ="First Name Required")]
         

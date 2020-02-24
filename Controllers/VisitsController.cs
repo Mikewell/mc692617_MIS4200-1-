@@ -41,7 +41,7 @@ namespace mc692617_MIS4200.Controllers
         public ActionResult Create()
         {
             ViewBag.petID = new SelectList(db.Pets, "petID", "name");
-            ViewBag.vetID = new SelectList(db.Vets, "vetID", "firstName");
+            ViewBag.vetID = new SelectList(db.Vets, "vetID", "fullName");
             return View();
         }
 
@@ -59,8 +59,8 @@ namespace mc692617_MIS4200.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.petID = new SelectList(db.Pets, "petID", "name", visits.petID);
-            ViewBag.vetID = new SelectList(db.Vets, "vetID", "firstName", visits.vetID);
+            ViewBag.petID = new SelectList(db.Pets, "Pet Name", "name", visits.petID);
+            ViewBag.vetID = new SelectList(db.Vets, "vetID", "fullName", visits.vetID);
             return View(visits);
         }
 
@@ -77,7 +77,7 @@ namespace mc692617_MIS4200.Controllers
                 return HttpNotFound();
             }
             ViewBag.petID = new SelectList(db.Pets, "petID", "name", visits.petID);
-            ViewBag.vetID = new SelectList(db.Vets, "vetID", "firstName", visits.vetID);
+            ViewBag.vetID = new SelectList(db.Vets, "vetID", "fullName", visits.vetID);
             return View(visits);
         }
 
@@ -95,7 +95,7 @@ namespace mc692617_MIS4200.Controllers
                 return RedirectToAction("Index");
             }
             ViewBag.petID = new SelectList(db.Pets, "petID", "name", visits.petID);
-            ViewBag.vetID = new SelectList(db.Vets, "vetID", "firstName", visits.vetID);
+            ViewBag.vetID = new SelectList(db.Vets, "vetID", "fullName", visits.vetID);
             return View(visits);
         }
 

@@ -10,7 +10,10 @@ namespace mc692617_MIS4200.Models
     {
 
         [Key]
+        [Display(Name = "Vet Name")]
         public int vetID { get; set; }
+
+        public string fullName { get { return lastName + ", " + firstName; } }
 
         [Display(Name = "First Name")]
         [Required(ErrorMessage = "First Name Required")]

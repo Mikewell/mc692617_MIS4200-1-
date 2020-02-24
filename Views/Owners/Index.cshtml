@@ -48,9 +48,9 @@
                 @Html.DisplayFor(modelItem => item.address)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.ownerID }) |
+                @Html.ActionLink(" ", "Edit", new { id = item.ownerID }, new { @class="glyphicon glyphicon-pencil"}) |
                 @Html.ActionLink("Details", "Details", new { id = item.ownerID }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.ownerID })
+                @Html.ActionLink(" ", "Delete", new { id = item.ownerID },new { @class="glyphicon glyphicon-trash"}) 
             </td>
         </tr>
     }

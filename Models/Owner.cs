@@ -13,6 +13,7 @@ namespace mc692617_MIS4200.Models
         [Display(Name = "Owner Name")]
         public int ownerID { get; set; }
 
+        [Display(Name = "Owner Name")]
         public string fullName { get { return lastName + ", " + firstName; } }
 
         [Display(Name = "First Name")]

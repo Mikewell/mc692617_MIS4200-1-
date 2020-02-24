@@ -32,19 +32,23 @@ namespace mc692617_MIS4200.Models
         [Required(ErrorMessage = "Enter dog's weight")]
        
         public string height { get; set; }
+
         [Display(Name = "Tracking Number")]
         [Required(ErrorMessage = "Enter dog's tracking number")]
-        
         public int trackingNumber { get; set; }
 
+        [Display(Name = "Photo")]
+        public string photo { get; set; }
+
         [Display(Name = "VisitID")]
-        
         public ICollection <Visits> Visits { get; set; }
         // the next two properties link the Pet to the Visit
         [Display(Name = "Owner")]
         
         public int ownerID { get; set; }
         public virtual Owner Owner { get; set; }
+
+        
 
 
 

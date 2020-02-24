@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Web;
@@ -49,16 +50,32 @@ namespace mc692617_MIS4200.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "petID,name,birthday,breed,weight,height,trackingNumber,ownerID")] Pet pet)
+        public ActionResult Create([Bind(Include = "petID,name,birthday,breed,weight,height,trackingNumber,photo,ownerID")] Pet pet)
         {
             if (ModelState.IsValid)
             {
+                //HttpPostedFileBase file = Request.Files["UploadedImage"]; //(A) – see notes below
+                //if (file != null && file.FileName != null && file.FileName != "") //(B)
+                //{
+                //    FileInfo fi = new FileInfo(file.FileName); //(C)
+                //    if (fi.Extension != ".png" && fi.Extension != ".jpg" && fi.Extension != ".gif")//(D)
+                //    {
+                //        TempData["Errormsg"] = "Image File Extension is not valid"; //(E)
+                //        return View(pet);
+                //    }
+                //    else
+                //    {
+                //        // this saves the file as the user’s ID and file extension
+                //        pet.photo = pet.petID + fi.Extension; //(F)
+                //        file.SaveAs(Server.MapPath("~/Images/" + pet.photo)); //(G)
+                //    }
+                //}
                 db.Pets.Add(pet);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            ViewBag.ownerID = new SelectList(db.Owners, "ownerID", "firstName", pet.ownerID);
+            ViewBag.ownerID = new SelectList(db.Owners, "ownerID", "fullName", pet.ownerID);
             return View(pet);
         }
 
@@ -74,7 +91,7 @@ namespace mc692617_MIS4200.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.ownerID = new SelectList(db.Owners, "ownerID", "firstName", pet.ownerID);
+            ViewBag.ownerID = new SelectList(db.Owners, "ownerID", "fullName", pet.ownerID);
             return View(pet);
         }
 
@@ -83,7 +100,7 @@ namespace mc692617_MIS4200.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "petID,name,birthday,breed,weight,height,trackingNumber,ownerID")] Pet pet)
+        public ActionResult Edit([Bind(Include = "petID,name,birthday,breed,weight,height,trackingNumber,photo,ownerID")] Pet pet)
         {
             if (ModelState.IsValid)
             {

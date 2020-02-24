@@ -59,7 +59,7 @@ namespace mc692617_MIS4200.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.petID = new SelectList(db.Pets, "Pet Name", "name", visits.petID);
+            ViewBag.petID = new SelectList(db.Pets, "petID", "name", visits.petID);
             ViewBag.vetID = new SelectList(db.Vets, "vetID", "fullName", visits.vetID);
             return View(visits);
         }
